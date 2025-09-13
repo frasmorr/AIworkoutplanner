@@ -1,12 +1,12 @@
-execises = {
-    "chest": {
+exercises = {
+    "Chest": {
         "bodyweight": ["Push-ups", "Chest Dips", "Chest Dips"],
         "dumbbell": ["Dumbbell Bench Press", "Dumbbell Flyes", "Dumbbell Pullover", "Incline Dumbbell Press", "Single Arm Dumbbell Press"],
         "barbell": ["Barbell Bench Press", "Incline Barbell Press", "Decline Barbell Press", "Close-Grip Bench Press", "EZ Barbell Pullover", "Wide Grip Dumbbell Bench Press"],
         "machine": ["Chest Press Machine", "Pec Deck Machine", "Cable Crossover", "Cable Flyes", "Smith Machine Bench Press", "Incline Smith Machine Press", "Low Cable Crossover"]
     },
 
-    "back": {
+    "Back": {
         "bodyweight": ["Push-ups", "Chest Dips", "Chest Dips", "Pull Ups", "Chin Ups", "Inverted Rows", "Supermans", "Back Extensions", "Banded Rows", "Weighted Pull Ups", "Ring Rows"],
         "dumbbell": ["Single Arm Bentover Dumbbell Rows", "Incline Dumbbell Rows", "Dumbbell Pullovers"],
         "barbell": ["Deadlifts", "Banded Deadlifts", "Mid-shin Rack Deadlifts", "Mid-shin Banded Rack Deadlifts", "Bent Over Barbell Rows"],
