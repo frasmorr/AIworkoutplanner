@@ -4,12 +4,12 @@ if __name__ == "__main__":
     print("💪 AI Workout Planner Prototype")
     
     # User input
-    goal = input("Enter your goal (strength / hypertrophy"" / endurance): ").strip()
-    equipment = input("Enter equipment (bodyweight / dumbbell / barbell / machine): ").strip()
+    goal = input("Enter your goal (strength / hypertrophy / endurance): ").strip().lower()
+    equipment = input("Enter equipment (bodyweight / dumbbell / barbell / machine): ").strip().lower()
     days = int(input("How many days per week do you want to train? "))
 
     # Generate workout
-    workout_plan = workoutplanner(goal, equipment, days)
+    workout_plan = workoutplanner.generate_workout(goal, equipment, days)
 
     # Output
     print("\n📅 Your Weekly Workout Plan:")
