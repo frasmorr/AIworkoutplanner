@@ -1,43 +1,114 @@
-exercises = {
-    "Chest": {
-        "bodyweight": ["Push-ups", "Chest Dips", "Chest Dips"],
-        "dumbbell": ["Dumbbell Bench Press", "Dumbbell Flyes", "Dumbbell Pullover", "Incline Dumbbell Press", "Single Arm Dumbbell Press"],
-        "barbell": ["Barbell Bench Press", "Incline Barbell Press", "Decline Barbell Press", "Close-Grip Bench Press", "EZ Barbell Pullover", "Wide Grip Dumbbell Bench Press"],
-        "machine": ["Chest Press Machine", "Pec Deck Machine", "Cable Crossover", "Cable Flyes", "Smith Machine Bench Press", "Incline Smith Machine Press", "Low Cable Crossover"]
-    },
+chestexercises = [
+    {"name": "Push-ups", "muscle": ["chest", "upper chest", "lower chest"], "equipment": "bodyweight", "time": 1, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Chest Dips", "muscle": ["chest", "upper chest", "lower chest"], "equipment": ["bodyweight", "machine"], "time": 2, "goal": ["strength", "hypertrophy"]},
+    {"name": "Bench Press", "muscle": ["chest", "upper chest"], "equipment": ["barbell", "dumbbell", "machine"], "time": 3, "goal": ["strength", "hypertrophy"]},
+    {"name": "Flyes", "muscle": ["chest", "upper chest", "lower chest"], "equipment": ["dumbbell", "machine"], "time": 3, "goal": ["hypertrophy"]},
+    {"name": "Pullovers", "muscle": ["chest", "upper chest", "lower chest"], "equipment": ["dumbbell", "machine"], "time": 4, "goal": ["hypertrophy", "strength"]},
+    {"name": "Incline Press", "muscle": ["chest", "upper chest"], "equipment": ["dumbbell", "barbell", "machine"], "time": 3, "goal": ["hypertrophy", "strength"]},
+    {"name": "Single Arm Press", "muscle": ["chest", "upper chest", "lower chest"], "equipment": "dumbbell", "time": 3, "goal": ["strength"]},
+    {"name": "Decline Press", "muscle": ["chest", "lower chest"], "equipment": ["dumbbell", "barbell"], "time": 3, "goal": ["hypertrophy"]},
+    {"name": "Close Grip Bench Press", "muscle": ["chest", "upper chest"], "equipment": "barbell", "time": 3, "goal": ["strength", "hypertrophy"]},
+    {"name": "Wide Grip Bench Press", "muscle": ["chest", "upper chest"], "equipment": "barbell", "time": 3, "goal": ["strength", "hypertrophy"]},
+    {"name": "Chest Press", "muscle": ["chest", "upper chest", "lower chest"], "equipment": "mechine", "time": 3, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Crossovers", "muscle": ["chest", "upper chest", "lower chest"], "equipment": "machine", "time": 3, "goal": ["hypertrophy", "strength"]},
+]
 
-    "Back": {
-        "bodyweight": ["Push-ups", "Chest Dips", "Chest Dips", "Pull Ups", "Chin Ups", "Inverted Rows", "Supermans", "Back Extensions", "Banded Rows", "Weighted Pull Ups", "Ring Rows"],
-        "dumbbell": ["Single Arm Bentover Dumbbell Rows", "Incline Dumbbell Rows", "Dumbbell Pullovers"],
-        "barbell": ["Deadlifts", "Banded Deadlifts", "Mid-shin Rack Deadlifts", "Mid-shin Banded Rack Deadlifts", "Bent Over Barbell Rows"],
-        "machine": ["Wide-grip Lat Pulldown", "Close-grip Lat Pulldown", "T-bar Rows", "Seated Cable Rows", "Single Arm Cable Rows", "Single Arm Lat Pulldown", "Back Extensions"]
-    },
+backexercises = [
+    {"name": "Pull-ups", "muscle": ["back", "lats", "rhomboids", "traps", "delts"], "equipment": ["bodyweight", "machine"], "time": 4, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Chin-ups", "muscle": ["back", "lats", "delts", "traps"], "equipment": ["bodyweight", "machine"], "time": 4, "goal": ["strength", "hypertrophy"]},
+    {"name": "Rows", "muscle": ["back", "lats", "rhomboids", "traps", "delts"], "equipment": ["barbell", "bodyweight", "machine, dumbbell"], "time": 3, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Supermans", "muscle": ["back", "lower bacK", "traps", "rhomboids", "delts"], "equipment": "bodyweight", "time": 2, "goal": ["strength", "endurance"]},
+    {"name": "Back Extensions", "muscle": ["back", "lower back"], "equipment": ["bodyweight", "machine"], "time": 4, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Pullovers", "muscle": ["back", "lats"], "equipment": ["dumbbell", "machine"], "time": 5, "goal": ["hypertrophy", "endurance"]},
+    {"name": "Deadlifts", "muscle": ["back", "lats", "traps", "rhomboids"], "equipment": ["barbell", "machine"], "time": 4, "goal": ["strength"]},
+    {"name": "Close Grip Lat Pulldown", "muscle": ["back", "lats", "rhomboids"], "equipment": "machine", "time": 4, "goal": ["strength", "hypertrophy"]},
+    {"name": "Wide Grip Lat Pulldown", "muscle": ["back", "lats", "delts"], "equipment": "machine", "time": 4, "goal": ["strength", "hypertrophy"]},
+    {"name": "T-bar Rows", "muscle": ["back", "lats", "rhomboids", "traps", "delts"], "equipment": "machine", "time": 4, "goal": ["strength", "hypertrophy"]},
+    {"name": "Single Arm Rows", "muscle": ["back", "lats", "rhomboids", "traps", "delts"], "equipment": ["dumbbell", "machine"], "time": 4, "goal": ["strength", "hypertrophy"]},
+    {"name": "Shrugs", "muscle": ["back", "traps", "upper back"], "equipment": ["barbell", "dumbbell", "banded", "machine"], "time": 5, "goal": ["strength", "hypertrophy", "endurance"]}
+]
 
-    "Legs": {
-        "Bodyweight": ["Bodyweight Calf Raises", "3-way Calf Raises", "Step-ups with Knee Raise", "Banded Leg Extensions", "Banded Leg Curls", "Air Squats", "Bulgarian Split Squats", "Lunges", "Jump Squats"],
-        "Dumbbell": ["Step Ups", "RDL's", "Lunges", "Goblet Squats", "Kettlebell Swings", "Bulgarian Split Squats", "Dumbbell Calf Raises"],
-        "Barbell": ["Standing Calf Raises", "Barbell Hip Thrusts", "Single Leg Hip Thrusts", "Deadlifts", "Back Squats", "Front Squats", "Box Squats", "Banded Box Squat", "Chain Box Squat", "Lunges", "Bulgarian Split Squats"],
-        "Machine": ["Thigh Abductor Machine", "Thigh Adductor Machine", "Smith Machine Calf Raises", "Seated Calf Raises", "Single Leg Horizontal Leg Raise", "Cable Kickbacks", "Step Ups with Knee Raise", "Single Leg Hip Thrust", "Quad Extensions", " Single Leg Press", "Leg Curls", "Hack Squats", "Leg Press"]
-    },
-    
-    "Arms": {
-        "BodyWeight": ["TRX Bicep Curls", "TRX Tricep Extensions", "Diamond Push-ups", "Close-grip Push-ups", "Chin Ups", "Inverted Rows", "Tricep Dips", "Assisted Tricep Dips", "Bench Dips", "Banded Bicep Curls", "Banded Tricep Extensions", "Banded Overhead Tricep Extensions", "Banded Dart Throws"],
-        "Dumbbell": ["Hammer Curls", "Incline Hammer Curls", "Bicep Curls", "Incline Bicep Curls", "Spider Curls", "Curl 21's", "Zottman Curls", "Skull Crushers", "Overhead Tricep Extensions"],
-        "Barbell": ["Close-grip Bench Press", "Wide-grip Barbell Curls", "Close-grip Barbell Curls", "Preacher Curls", "EZ-bar Spider Curl", "EZ-bar Curls", "Barbell Curls", "Skull Crushers", "EZ-bar Skull Crushers", "Palms Up Wrist Curls", "Palms Down Wrist Curls", "Behind the Back Wrist Curls", "Reverse Grip Barbell Curls"],
-        "Machine": ["Machine Hammer Curls", "Machine Bicep Curls", "Machine Preacher Curls", "Back Cable Bicep Curls", "Tricep Pushdowns", "Tricep Kickbacks", "Tricep Rope Pushdowns", "Overhead Cable Tricep Extensions", "Single Arm Cable Tricep Extensions", "Dips Machine", "Cable Dart Throws"]
-    },
 
-    "Shoulders": {
-        "Bodyweight": ["Pike Push-ups", "Banded Facer Pulls", "Banded Lateral Raises", "Banded Front Raises", "Banded Shoulder Flyes"],
-        "Dumbbell": ["Dumbbell Shoulder Press", "Seated Dumbbell Shoulder Press", "Arnold Press", "Dumbbell Lateral Raises", "Dumbbell Front Raises", "Dumbbell Read Delt Flyes", "Dumbbell Shrugs", "YTW's", "Dumbbell Push Press", "Dumbbell Snatch", "Dumbbell Strict Press"],
-        "Barbell": ["Barbell Shrugs", "Barbell Push Press", "Barbell Overhead Strict Press", "Landmine Press", "Over and Back's"],
-        "Machine": ["Smith Machine Overhead Press", "Cable Lateral Raises", "Cable Front Raises", "Reverse Pec Deck Flyes"]
-    },
+legexercises = [
+    {"name": "Calf Raises", "muscle": ["legs", "calf", "calves"], "equipment": ["bodyweight", "dumbbell", "barbell", "machine"], "time": 2, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "3-way Calf Raises", "muscle": ["legs", "calf", "cavles"], "equipment": ["bodyweight", "dumbbell", "barbell", "machine"], "time": 2, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Step-ups", "muscle": ["legs", "quads", "quadriceps", "hammies", "hamstrings", "glutes"], "equipment": ["bodyweight", "dumbbell", "barbell", "machine"], "time": 4, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Leg Extensions", "muscle": ["legs", "quads", "quadriceps"], "equipment": ["banded", "machine"], "time": 4, "goal": ["strength", "hypertrophy"]},
+    {"name": "Leg Curls", "muscle": ["legs", "hamstrings", "hammies"], "equipment": ["banded", "machine"], "time": 2, "goal": ["strength", "hypertrophy"]},
+    {"name": "Squats", "muscle": ["legs", "quads", "quadriceps", "glutes", "hamstrings", "hammies"], "equipment": ["bodyweight", "dumbbell", "barbell", "machine", "banded"], "time": 5, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Bulgarian Split Squats", "muscle": ["legs", "quads", "quadriceps", "glutes"], "equipment": ["bodyweight", "dumbbell", "barbell"], "time": 4, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Lunges", "muscle": ["legs", "quads", "quadriceps", "hamstrings", "hammies", "glutes"], "equipment": ["bodyweight", "dumbbell", "barbell", "machine"], "time": 2, "goal": ["hypertrophy", "endurance"]},
+    {"name": "RDL's", "muscle": ["legs", "hamstrings", "hammies", "glutes"], "equipment": ["dumbbell", "barbell", "machine"], "time": 2, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Hip Thrusts", "muscle": ["legs", "glutes", "hamstrings", "hammies", "quads", "quadriceps"], "equipment": ["dumbbell", "barbell", "machine"], "time": 2, "goal": ["strength", "hypertrophy"]},
+    {"name": "Deadlifts", "muscle": ["legs", "glutes", "hamstrings", "hammies", "quads", "quadriceps", "calves", "adductors"], "equipment": ["bodyweight", "dumbbell", "barbell", "machine"], "time": 2, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Thigh Abductor", "muscle": ["legs", "abductors", "glutes"], "equipment": "machine", "time": 2, "goal": "strength"},
+    {"name": "Thigh Adductor", "muscle": ["legs", "adductors", "glutes"], "equipment": "machine", "time": 2, "goal": "strength"},
+    {"name": "Kickbacks", "muscle": ["legs", "glutes", "thighs"], "equipment": "machine", "time": 2, "goal": ["strength", "hypertrophy"]},
+    {"name": "Leg Press", "muscle": ["legs", "quads", "quadriceps", "hamstrings", "hammies", "glutes", "calves"], "equipment": "machine", "time": 2, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Single Leg Press", "muscle": ["legs", "quads", "quadriceps", "hamstrings", "hammies", "glutes", "calves"], "equipment": "machine", "time": 2, "goal": ["strength", "hypertrophy", "endurance"]},
+]
 
-    "Core": {
-        "Bodyweight": ["Plank", "Russian Twists", "Hanging Leg Raises", "Lying Knee Tucks", "Lying Leg Raises", "Bicycle Crunches", "Sit-ups", "V-ups", "Flutter Kicks", "Toe Touches", "Side Plank"],
-        "Dumbbell": ["Dumbbell Russian Twists", "Dumbbell Sit-ups", "Dumbbell V-ups"],
-        "Barbell": ["Landmine Twists", "Barbell Rollouts"],
-        "Machine": ["Machine Ab Crunch"],
-    }
-}
+armexercises = [
+    {"name": "TRX Bicep Curls", "muscle": ["arms", "biceps", "delts"], "equipment": "bodyweight", "time": 5, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "TRX Tricep Extensions", "muscle": ["arms", "triceps", ""], "equipment": "bodyweight", "time": 5, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Diamond Push-ups", "muscle": ["arms", "triceps"], "equipment": "bodyweight", "time": 5, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Pull-ups", "muscle": ["arms", "biceps", "forearms"], "equipment": ["bodyweight", "machine"], "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Chin-ups", "muscle": ["arms", "biceps", "forearms"], "equipment": ["bodyweight", "machine"], "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Inverted Rows", "muscle": ["arms", "biceps", "forearms"], "equipment": "bodyweight", "time": 5, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Dips", "muscle": ["arms", "triceps"], "equipment": ["bodyweight", "machine"], "time": 3, "goal": ["strength", "hypertrophy"]},
+    {"name": "Curls", "muscle": ["arms", "biceps", "forearms"], "equipment": ["bodyweight", "barbell", "banded", "machine"], "time": 2, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Tricep Pushdowns", "muscle": ["arms", "triceps"], "equipment": ["banded", "machine", "banded"], "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Overhead Extensions", "muscle": ["arms", "triceps"], "equipment": ["dumbbell", "machine", "banded"], "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Dart Throws", "muscle": ["arms", "triceps"], "equipment": ["machine", "banded"], "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Hammer Curls ", "muscle": ["arms", "biceps", "forearms"], "equipment": ["dumbbell", "banded", "machine"], "time": 2, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Spider Curls", "muscle": ["arms", "biceps", "forearms"], "equipment": "dumbbell", "time": 2, "goal": ["strength", "hypertrophy"]},
+    {"name": "Curl 21's", "muscle": ["arms", "biceps", "forearms"], "equipment": "dumbbell", "time": 3, "goal": ["hypertrophy", "endurance"]},
+    {"name": "Zottman Curls", "muscle": ["arms", "biceps", "forearms"], "equipment": "dumbbell", "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Skull Crushers", "muscle": ["arms", "triceps"], "equipment": ["dumbbell", "barbell"], "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Palms Up Wrist Curl", "muscle": ["arms", "forearms"], "equipment": ["barbell", "dumbbell", "machine"], "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Palms Down Wrist Curl", "muscle": ["arms", "forearms"], "equipment": ["barbell", "dumbbell", "machine"], "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Reverse Grip Curls", "muscle": ["arms", "forearms", "biceps"], "equipment": ["dumbbell", "barbell", "machine"], "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Drag Curls", "muscle": ["arms", "biceps"], "equipment": "dumbbell", "time": 5, "goal": ["hypertrophy", "endurance"]},
+    {"name": "Close Grip Bench Press", "muscle": ["arms", "triceps"], "equipment": ["barbell", "barbell"], "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Close Grip Bar Curls", "muscle": ["arms", "biceps", "forearms"], "equipment": "barbell", "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Wide Grip Bar Curls", "muscle": ["arms", "biceps", "forearms"], "equipment": "barbell", "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Preacher Curls", "muscle": ["arms", "biceps", "forearms"], "equipment": ["barbell", "dumbbell", "machine"], "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Tricep Kickbacks", "muscle": ["arms", "triceps"], "equipment": ["machine", "banded"], "time": 5, "goal": ["strength", "hypertrophy"]},
+]
+
+shoulderexercises = [
+    {"name": "Pike Push-ups", "muscle": ["shoulders", "delts", "front delts", "anterior delts"], "equipment": "bodyweight", "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Face Pulls", "muscle": ["shoulders", "delts", "rear delts", "posterior delts"], "equipment": ["bodyweight", "banded", "machine"], "time": 5, "goal": ["endurance"]},
+    {"name": "Lateral Raises", "muscle": ["shoulders", "delts", "side delts", "medial delts"], "equipment": ["banded", "machine", "dumbbell"], "time": 5, "goal": ["strength"]},
+    {"name": "Front Raises", "muscle": ["shoulders", "delts", "front delts", "anterior delts"], "equipment": ["banded", "machine", "dumbbell"], "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Pull-aparts", "muscle": ["shoulders", "delts", "rear delts", "posterior delts"], "equipment": "banded", "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Strict Press", "muscle": ["shoulders", "delts", "front delts", "anterior delts", "side delts", "lateral delts", "medial delts", "rear delts", "posterior delts"], "equipment": ["dumbbell", "barbell"], "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Seated Strict Press", "muscle": ["shoulders", "delts", "front delts", "anterior delts", "side delts", "lateral delts", "medial delts", "rear delts", "posterior delts"], "equipment": ["dumbbell", "barbell"], "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Arnold Press", "muscle": ["shoulders", "delts", "front delts", "anterior delts", "side delts", "lateral delts", "medial delts", "rear delts", "posterior delts"], "equipment": "dumbbell", "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Rear Delt Flyes", "muscle": ["shoulders", "delts", "rear delts", "posterior delts"], "equipment": "dumbbell", "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "YTW's", "muscle": ["shoulders", "delts", "rear delts", "posterior delts", "front delts", "anterior delts"], "equipment": ["banded", "dumbbell"], "time": 5, "goal": ["strength", "endurance"]},\
+    {"name": "Push Press", "muscle": ["shoulders", "delts", "front delts", "anterior delts", "side delts", "lateral delts", "medial delts"], "equipment": ["banded", "dumbbell", "barbell"], "time": 5, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Snatch and Press", "muscle": ["shoulders", "delts", "front delts", "anterior delts"], "equipment": ["dumbbell", "barbell"], "time": 5, "goal": ["strength", "hypertrophy", "endurance"]},
+    {"name": "Reverse Raises", "muscle": ["shoulders", "delts", "back delts", "posterior delts"], "equipment": "dumbbell", "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Landmine Press", "muscle": ["shoulders", "delts", "front delts", "anterior delts", "side delts", "lateral delts", "medial delts"], "equipment": "barbell", "time": 5, "goal": ["strength", "hypertrophy"]},
+    {"name": "Over and Backs", "muscle": ["shoulders", "delts", "front delts", "anterior delts", "side delts", "lateral delts", "medial delts", "rear delts", "posterior delts"], "equipment": "barbell", "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Reverse Pec Deck Flyes", "muscle": ["shoulders", "delts", "rear delts", "posterior delts"], "machine": "bodyweight", "time": 5, "goal": ["strength", "hypertrophy"]},
+]
+
+coreexercises = [
+    {"name": "Plank", "muscle": ["core", "abs", "obliques"], "equipment": "bodyweight", "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Russian Twists", "muscle": ["core", "abs", "obliques"], "equipment": ["bodyweight", "dumbbell"], "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Hanging Leg Raises", "muscle": ["core", "abs", "obliques", "hip flexors"], "equipment": "bodyweight", "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Hanging Knee Raises", "muscle": ["core", "abs", "obliques", "hip flexors"], "equipment": "bodyweight", "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Lying Knee Tucks", "muscle": ["core", "abs", "obliques", "hip flexors"], "equipment": "bodyweight", "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Lying Leg Raises", "muscle": ["core", "abs", "obliques", "hip flexors"], "equipment": "bodyweight", "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Situps", "muscle": ["core", "abs", "hip flexors"], "equipment": ["bodyweight", "dumbbell"], "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "V-ups", "muscle": ["core", "abs", "obliques", "hip flexors"], "equipment": ["bodyweight", "dumbbell"], "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Flutter Kicks", "muscle": ["core", "abs", "hip flexors", "obliques"], "equipment": "bodyweight", "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Toe Touches", "muscle": ["core", "abs", "obliques"], "equipment": "bodyweight", "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Side Plank", "muscle": ["core", "abs", "obliques"], "equipment": "bodyweight", "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Landmine Twists", "muscle": ["core", "abs", "obliques"], "equipment": "bodyweight", "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Barbell Rollouts / Ab Wheel", "muscle": ["core", "abs", "obliques"], "equipment": ["bodyweight", "barbell"], "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Crunches", "muscle": ["core", "abs"], "equipment": "bodyweight", "time": 5, "goal": ["strength", "endurance"]},
+    {"name": "Pallof Press", "muscle": ["core", "abs", "obliques"], "equipment": "banded", "time": 5, "goal": ["strength", "endurance"]},
+]
